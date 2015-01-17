@@ -1,0 +1,90 @@
+@import '../bower_components/normalize.styl/normalize.styl'
+@import '_fonts'
+
+$color-text = #434343
+
+*, *:before, *:after
+  box-sizing: border-box
+
+html, body
+  height: 100%
+  font-family: Merriweather, Georgia, serif
+  font-size: 87.5%
+  line-height: 1.518
+  color: $color-text
+  height: 100%
+  width: 100%
+  text-shadow: 0 0 2px rgba(0, 0, 0,0.4)
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -ms-content-zooming: none
+  @media (min-width: 460px)
+    font-size: 112.5%
+
+::selection {
+  background: rgba(255,194,25,0.7);
+}
+::-moz-selection {
+  background: rgba(255,194,25,0.7);
+}
+
+h2
+  margin: 0 0 1em 0
+
+.map
+  font-size: 1rem
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 1
+
+.slide
+  position: relative
+  z-index: 5
+  height: 100%
+
+.intro
+  font-size: 1rem
+  background: #fff url('../images/intro.jpg') no-repeat center center
+  background-size: cover
+  background-attachment: fixed
+  &__title
+    font-size: 5em
+    line-height: 1
+    font-family: vogamedium
+    color: #fff
+    margin: 0
+    position: absolute
+    top: 3%
+    left: 15%
+    &__and
+      font-size: 2em
+      display: inline-block
+      margin-left: -.06em
+    &__name
+      &--1
+        vertical-align: top
+
+.location
+  font-size: 1rem
+  pointer-events: none
+  &__content
+    position: absolute
+    pointer-events: auto
+    top: 4em
+    right: 2em
+    width: 15em
+    background: #fff
+  &--party__content
+    top: auto
+    left: 2em
+    right: auto
+    bottom: 3em
+
+.kitzkatz
+  font-size: 1rem
+  background: #fff url('../images/kitzkatz.jpg') no-repeat top center
+  background-size: cover
+  background-attachment: fixed
