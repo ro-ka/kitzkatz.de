@@ -1,6 +1,12 @@
 extends /layouts/_default
 
 block content
+  nav.navigation
+    a.navigation__link(href='#standesamt') Standesamt
+    a.navigation__link(href='#feier') Feier
+    a.navigation__link(href='#morgen') Der Morgen danach…
+    a.navigation__link(href='#uebernachtung') Übernachtung
+
   .map
 
   .slide.intro
@@ -8,17 +14,72 @@ block content
       span.intro__title__name.intro__title__name--1 Ulrike
       span.intro__title__and &amp;
       span.intro__title__name.intro__title__name--2 Robert
+    .intro__action &#8675;&nbsp;&nbsp;Einfach&nbsp;scrollen&nbsp;&nbsp;&#8675;
 
-  .slide.location.location--wedding
+  .slide.location.location--overview
+
+  #standesamt.slide.location.location--wedding
     .location__content.location--wedding__content
-      h2 Standesamt
+      h2.location__content__title Standesamt
+      p Wir trauen uns! Die standesamtliche Trauung findet am 24.7. um 13h im Standesamt Hamburg-Nord statt. Wenn Ihr Zeit und Lust habt, auch an dem Tag mit uns anzustoßen, kommt vorbei!
+      p.location__content__address
+        strong Standesamt Hamburg-Nord
+        br
+        | Kümmellstraße 5, 20249 Hamburg
+        br
+        a.location__content__address__navigation(title='Standesamt Hamburg-Nord', href='https://www.google.de/maps/dir//Bezirksamt+Hamburg-Nord+Standesamt,+Kümmellstraße+5,+20249+Hamburg/@53.5895903,9.9851826,17z/', target='_blank')
+          | Route planen
 
-  .slide.location.location--party
+  #feier.slide.location.location--party
     .location__content.location--party__content
-      h2 Feier
+      h2.location__content__title Feier
+      p Aus Kitz und Katz wird KitzKatz! Und das wollen wir mit euch feiern!
+      p.location__content__address
+        strong Villa Mignon
+        br
+        | Osdorfer Landstraße 380, 22589 Hamburg
+        br
+        a.location__content__address__navigation(title='Villa Mignon', href='https://www.google.de/maps/dir//Villa+Mignon,+Osdorfer+Landstra%C3%9Fe+380,+22589+Hamburg/@53.576147,9.82766,17z/', target='_blank')
+          | Route planen
+
 
   .slide.kitzkatz
 
-  .slide.location.location--morning
+  #morgen.slide.location.location--morning
     .location__content.location--morning__content
-      h2 Der Morgen danach…
+      h2.location__content__title Der Morgen danach…
+      p Ein ordentliches Katerfrühstück, im Lieblingscafé an der Ecke. Wir freuen uns, wenn wir gemeinsam den vergangenen Abend bei hausgemachten Brötchen und Kuchen auswerten können!
+      p.location__content__address
+        strong The Village Den
+        br
+        | Lübecker Straße 29, 22087 Hamburg
+        br
+        a.location__content__address__navigation(title='The Village Den', href='https://www.google.de/maps/dir//The+Village+Den,+Lübecker+Straße+29,+22087+Hamburg/@53.560874,10.03004,17z/', target='_blank')
+          | Route planen
+
+  #uebernachtung.slide.location.location--sleeping
+    .location__content.location--sleeping__content
+      h2.location__content__title Übernachtung
+      p Noch kein Bett in Hamburg? Keine Sorge, hier wird geholfen!
+      p.location__content__address
+        strong Superbude St. Pauli
+        br
+        | Juliusstraße 1-7, 22769 Hamburg
+        br
+        a.location__content__address__navigation(title='Superbude St. Pauli', href='https://www.google.de/maps/dir//Hostel+Superbude+St.+Pauli,+Juliusstraße+1-7,+22769+Hamburg/@53.560498,9.96019,17z/', target='_blank')
+          | Route planen
+
+  .imprint
+    .imprint__content
+      h2 Impressum
+      p
+        strong Inhaltlich Verantwortlicher:
+        br
+        | Robert Katzki
+        br
+        | Hamburg
+        br
+        | robert@katzki.de
+      p
+        strong Haftungshinweis:
+        |  Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.

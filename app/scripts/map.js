@@ -23,18 +23,23 @@ app.Map = new Model({
    * Initialize the marker
    */
   initMarkers: function() {
-    var weddingLocation = [53.589882, 9.9851075],
+    var overviewDummys = [[53.560874, 10.04], [53.576456438929, 9.821]],
+      weddingLocation = [53.589882, 9.9851075],
       weddingDummys = [[53.589882, 9.999], [53.589882, 9.984]],
       partyLocation = [53.576456438929, 9.82718735933304],
-      partyDummys = [[53.576456438929, 9.821], [53.576456438929, 9.829]],
+      partyDummys = [[53.576456438929, 9.82], [53.576456438929, 9.83]],
       morningLocation = [53.560874, 10.03004],
-      morningDummys = [[53.560874, 10.04], [53.560874, 10.025]];
+      morningDummys = [[53.560874, 10.045], [53.560874, 10.027]],
+      sleepingLocation = [53.560498, 9.96019],
+      sleepingDummys = [[53.560498, 9.93], [53.560498, 9.97]];
 
     L.marker(weddingLocation, {
       alt: 'wedding',
       title: 'Standesamtliche Trauung',
       icon: L.mapbox.marker.icon({
-        'marker-color': '#f86767'
+        'marker-size': 'large',
+        'marker-symbol': 'circle-stroked',
+        'marker-color': '#E74C3C'
       })
     })
     .addTo(this.mapCanvas)
@@ -44,7 +49,9 @@ app.Map = new Model({
       alt: 'party',
       title: 'Feier',
       icon: L.mapbox.marker.icon({
-        'marker-color': '#f86767'
+        'marker-size': 'large',
+        'marker-symbol': 'circle-stroked',
+        'marker-color': '#E74C3C'
       })
     })
     .addTo(this.mapCanvas)
@@ -54,16 +61,32 @@ app.Map = new Model({
         alt: 'morning',
         title: 'Der Morgen danach…',
         icon: L.mapbox.marker.icon({
-          'marker-color': '#f86767'
+        'marker-size': 'large',
+        'marker-symbol': 'cafe',
+        'marker-color': '#E74C3C'
+        })
+      })
+      .addTo(this.mapCanvas)
+      .on('click', this.onMarkerClick);
+
+    L.marker(sleepingLocation, {
+        alt: 'sleeping',
+        title: 'Übernachtung',
+        icon: L.mapbox.marker.icon({
+        'marker-size': 'large',
+        'marker-symbol': 'lodging',
+        'marker-color': '#E74C3C'
         })
       })
       .addTo(this.mapCanvas)
       .on('click', this.onMarkerClick);
 
     this.markerBounds = {
+      overview: L.latLngBounds(overviewDummys),
       wedding: L.latLngBounds(weddingDummys),
       party: L.latLngBounds(partyDummys),
-      morning: L.latLngBounds(morningDummys)
+      morning: L.latLngBounds(morningDummys),
+      sleeping: L.latLngBounds(sleepingDummys)
     };
   },
 

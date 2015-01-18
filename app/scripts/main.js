@@ -16,7 +16,9 @@ app.Main = new Model({
    * Initialize the waypoints
    */
   initWaypoints: function() {
-    $.each(['wedding', 'party', 'morning'], $.proxy(function(index, name) {
+    var locations = ['overview', 'wedding', 'party', 'morning', 'sleeping'];
+
+    $.each(locations, $.proxy(function(index, name) {
       $('.location--' + name).waypoint({
         handler: function(direction) {
           if (direction !== 'down') {

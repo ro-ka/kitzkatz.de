@@ -1,8 +1,6 @@
 @import '../bower_components/normalize.styl/normalize.styl'
 @import '_fonts'
 
-$color-text = #434343
-
 *, *:before, *:after
   box-sizing: border-box
 
@@ -11,30 +9,69 @@ html, body
   font-family: Merriweather, Georgia, serif
   font-size: 87.5%
   line-height: 1.518
-  color: $color-text
+  background: #DCDCDC
+  color: #404D5B
   height: 100%
   width: 100%
-  text-shadow: 0 0 2px rgba(0, 0, 0,0.4)
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   -ms-content-zooming: none
   @media (min-width: 460px)
-    font-size: 112.5%
+    font-size: 100%
 
 ::selection {
-  background: rgba(255,194,25,0.7);
+  color: #fff;
+  background: rgb(231,76,60);
 }
 ::-moz-selection {
-  background: rgba(255,194,25,0.7);
+  color: #fff;
+  background: rgb(231,76,60);
 }
 
+a
+  position: relative
+  display: inline-block
+  outline: medium none
+  color: #404D5B
+  vertical-align: bottom
+  text-decoration: none
+  border-bottom: 1px solid rgba(52, 73, 94, 0.4)
+  font-weight: 500
+  transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s
+  &:hover, &:focus
+    outline: 0 none
+    border-color: rgba(52, 73, 94, 0)
+    background-color: rgba(52, 73, 94, 0.1)
+
 h2
-  margin: 0 0 1em 0
+  font-family: 'neoretrodrawregular', sans
+  font-size: 2em
+  margin: 0
+
+.navigation
+  font-size: 1rem
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 5
+  text-align: center
+  background: #404D5B
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7)
+  &__link
+    display: inline-block
+    color: #fff
+    font-weight: 700
+    text-shadow: 0 0 2px rgba(0, 0, 0,0.4)
+    margin: .4em .5em
+    padding: .1em .5em
+    &:hover, &:focus
+      border-bottom-color: #fff
 
 .map
   font-size: 1rem
   position: fixed
-  top: 0
+  top: 2.5em
   left: 0
   right: 0
   bottom: 0
@@ -42,7 +79,7 @@ h2
 
 .slide
   position: relative
-  z-index: 5
+  z-index: 2
   height: 100%
 
 .intro
@@ -51,14 +88,18 @@ h2
   background-size: cover
   background-attachment: fixed
   &__title
-    font-size: 5em
+    font-size: 3.5em
     line-height: 1
     font-family: vogamedium
+    text-shadow: 0 0 2px rgba(0, 0, 0,0.4)
     color: #fff
     margin: 0
     position: absolute
-    top: 3%
+    top: 1.7em
     left: 15%
+    @media (min-width: 600px)
+      font-size: 5em
+      top: .7em
     &__and
       font-size: 2em
       display: inline-block
@@ -66,6 +107,13 @@ h2
     &__name
       &--1
         vertical-align: top
+  &__action
+    position: absolute
+    bottom: 1em
+    left: 50%
+    transform: translateX(-50%)
+    font-size: 1.4em
+    color: #fff
 
 .location
   font-size: 1rem
@@ -73,18 +121,51 @@ h2
   &__content
     position: absolute
     pointer-events: auto
-    top: 4em
-    right: 2em
-    width: 15em
-    background: #fff
-  &--party__content
-    top: auto
-    left: 2em
-    right: auto
     bottom: 3em
+    right: 5%
+    max-width: 90%
+    padding: 1em 1.5em
+    background: #fff
+    box-shadow: 0 0 2px rgba(0, 0, 0,0.4)
+    @media (min-width: 600px)
+      max-width: 50%
+    &__address
+      padding-left: 1.5em
+      position: relative
+      &:before
+        content: '\e072'
+        display: block
+        position: absolute
+        top: .3em
+        left: 0
+        font-family: 'icomoon'
+        speak: none
+        font-style: normal
+        font-weight: normal
+        font-variant: normal
+        text-transform: none
+        line-height: 1
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+
+  &--party__content, &--sleeping__content
+    left: 5%
+    right: auto
 
 .kitzkatz
   font-size: 1rem
   background: #fff url('../images/kitzkatz.jpg') no-repeat top center
   background-size: cover
   background-attachment: fixed
+
+.imprint
+  font-size: 1rem
+  background: #404D5B
+  padding: 2em
+  z-index: 2
+  position: relative
+  color: #fff
+  margin-top: 20em
+  &__content
+    max-width: 40em
+    margin: 0 auto
