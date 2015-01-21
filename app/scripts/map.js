@@ -33,19 +33,19 @@ app.Map = new Model({
           name: 'wedding',
           title: 'Standesamt',
           symbol: 'circle-stroked',
-          location: [53.589882, 9.9851075]
+          location: [53.5900085484691, 9.98429775238037]
         },
         {
           name: 'party',
           title: 'Feier',
           symbol: 'circle-stroked',
-          location: [53.576456438929, 9.82718735933304]
+          location: [53.5765981765732, 9.82722222805023]
         },
         {
           name: 'morning',
           title: 'Der Morgen danach…',
           symbol: 'cafe',
-          location: [53.560874, 10.03004]
+          location: [53.5610806576551, 10.0299221277237]
         },
         {
           name: 'sleeping',
