@@ -9,7 +9,7 @@ app.Map = new Model({
 
     L.mapbox.accessToken = 'pk.eyJ1Ijoicm9rYSIsImEiOiJvR29QUEp3In0.' +
       'xeb909L0DGJcmmprwfIwKA ';
-    this.mapCanvas = L.mapbox.map($el[0], 'roka.kpghj01n', {
+    this.mapCanvas = L.mapbox.map($el[0], 'roka.62c84d10', {
       scrollWheelZoom: false,
       minZoom: 11,
       center: [53.57, 9.93],
