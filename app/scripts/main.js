@@ -6,10 +6,40 @@ app.Main = new Model({
    */
   init: function() {
     this.map = new app.Map();
+    this.$navigation = $('.navigation');
 
     this.map.on('location', this.scrollToLocation);
 
     this.initWaypoints();
+
+    $('.menu-button').on('click', this.openMenu);
+    $('.navigation__close').on('click', this.onMenuCloseClick);
+    $('.navigation__link').on('click', this.closeMenu);
+  },
+
+  /**
+   * Open the menu
+   */
+  openMenu: function(event) {
+    event.preventDefault();
+
+    this.$navigation.addClass('navigation--visible');
+  },
+
+  /**
+   * Close the menu
+   */
+  closeMenu: function() {
+    this.$navigation.removeClass('navigation--visible');
+  },
+
+  /**
+   * On click of the menu close button
+   */
+  onMenuCloseClick: function(event) {
+    event.preventDefault();
+
+    this.closeMenu();
   },
 
   /**
