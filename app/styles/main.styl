@@ -44,12 +44,14 @@ a
     background-color: rgba(52, 73, 94, 0.1)
 
 h2
-  font-family: 'neoretrodrawregular', sans
-  font-size: 2em
+  font-family: 'vintage_fairregular', sans
+  font-size: 2.5em
+  text-transform: lowercase
   margin: 0
 
 .menu-button
   font-size: 2rem
+  font-family: 'vintage_fairregular', sans
   position: fixed
   top: 1em
   right: 1em
@@ -77,10 +79,16 @@ h2
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7)
   padding: 2em .5em 2em 4em
   text-align: right
-  transform: translateX(100%)
+  transform: translateX(120%)
   transition: transform .3s ease
   &--visible
     transform: translateX(0)
+  &__flower
+    color: #fff
+    position: absolute
+    bottom: -.4em
+    left: -.2em
+    font-size: 7em
   &__close
     font-size: 2em
     position: absolute
@@ -111,7 +119,6 @@ h2
     &:hover, &:focus
       &:before, &:after
         height: 65%
-
   &__link
     font-size: 2em
     text-transform: uppercase

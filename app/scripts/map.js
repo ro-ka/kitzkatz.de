@@ -37,7 +37,7 @@ app.Map = new Model({
         },
         {
           name: 'party',
-          title: 'Feier',
+          title: 'Trauung &amp; Feier',
           symbol: 'circle-stroked',
           location: [53.5765981765732, 9.82722222805023]
         },
@@ -49,7 +49,7 @@ app.Map = new Model({
         },
         {
           name: 'sleeping',
-          title: 'Übernachtung',
+          title: 'Nachtlager: Superbude',
           symbol: 'lodging',
           location: [53.560498, 9.96019]
         },
