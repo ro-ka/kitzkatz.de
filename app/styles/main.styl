@@ -63,6 +63,11 @@ h2
   text-transform: uppercase
   text-shadow: 0 0 2px rgba(0, 0, 0,0.4)
   transition: border .3s ease, background .3s ease
+  opacity: 0
+  animation: fade-in ease 1
+  animation-fill-mode: forwards
+  animation-duration: 1s
+  animation-delay: 0.7s
   &:hover, &:focus
     border-color: #fff
     background-color: rgba(0, 0, 0, .25)
@@ -73,16 +78,21 @@ h2
   top: 0
   right: 0
   width: 100%
-  max-width: 27.5em
+  max-width: 30em
   z-index: 5
   background: #404D5B
+  border-right: 5em solid #404D5B
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7)
   padding: 2em .5em 2em 4em
   text-align: right
   transform: translateX(120%)
-  transition: transform .3s ease
+  animation-fill-mode: both
   &--visible
-    transform: translateX(0)
+    animation: .75s ease bounce-from-right
+    transform: translateX(5em)
+  &--hidden
+    animation: .75s ease bounce-to-right
+    transform: translateX(120%)
   &__flower
     color: #fff
     position: absolute
@@ -161,11 +171,16 @@ h2
     color: #fff
     margin: 0
     position: absolute
-    top: 1.7em
+    top: 1em
     left: 15%
+    opacity: 0
+    animation: fade-in ease 1
+    animation-fill-mode: forwards
+    animation-duration: 1s
+    animation-delay: 0.7s
     @media (min-width: 600px)
       font-size: 5em
-      top: .7em
+      top: .4em
     &__and
       font-size: 2em
       display: inline-block
@@ -180,6 +195,11 @@ h2
     transform: translateX(-50%)
     font-size: 1.4em
     color: #fff
+    opacity: 0
+    animation: fade-in ease 1
+    animation-fill-mode: forwards
+    animation-duration: 1s
+    animation-delay: 0.7s
 
 .location
   font-size: 1rem
@@ -239,3 +259,27 @@ h2
   &__content
     max-width: 40em
     margin: 0 auto
+
+@keyframes bounce-from-right
+  0%
+    transform: translateX(120%)
+  60%
+    transform: translateX(3em)
+  80%
+    transform: translateX(5.75em)
+  100%
+    transform: translateX(5em)
+
+@keyframes bounce-to-right
+  0%
+    transform: translateX(0)
+  20%
+    transform: translateX(3.5em)
+  100%
+    transform: translateX(120%)
+
+@keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1

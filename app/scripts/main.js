@@ -24,6 +24,7 @@ app.Main = new Model({
     event.preventDefault();
 
     this.$navigation.addClass('navigation--visible');
+    this.$navigation.removeClass('navigation--hidden');
   },
 
   /**
@@ -31,6 +32,7 @@ app.Main = new Model({
    */
   closeMenu: function() {
     this.$navigation.removeClass('navigation--visible');
+    this.$navigation.addClass('navigation--hidden');
   },
 
   /**
