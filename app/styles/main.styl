@@ -99,6 +99,7 @@ h2
     bottom: -.4em
     left: -.2em
     font-size: 7em
+    text-shadow: 0 0 2px rgba(0, 0, 0,0.4)
   &__close
     font-size: 2em
     position: absolute
@@ -217,6 +218,32 @@ h2
       max-width: 50%
     @media (min-width: 1400px)
       max-width: 50em
+    &__icon
+      font-size: 5em
+      position: absolute
+      &--1
+        top: .25em
+        right: 2em
+        transform: rotate(15deg)
+      &--3
+        font-size: 4em
+        bottom: .25em
+        right: 1.7em
+        transform: rotate(5deg)
+        color: rgb(231,76,60)
+      &--4
+        bottom: .25em
+        right: 1em
+        transform: rotate(50deg)
+      &--5
+        bottom: .5em
+        right: .75em
+        transform: rotate(150deg)
+      &--heart
+        font-size: 3em
+        top: .25em
+        right: .5em
+        transform: rotate(15deg)
     &__address
       padding-left: 1.5em
       position: relative
