@@ -25,3 +25,19 @@ html(lang="en")
     script(src='/scripts/map.js')
     script(src='/scripts/main.js')
     // endbuild
+
+    script.
+      var _paq = _paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//analytics.katzki.de/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 3]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    noscript
+      p
+        img(src='//analytics.katzki.de/piwik.php?idsite=3', style='border:0;', alt='')
+
