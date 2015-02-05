@@ -2,9 +2,17 @@ var app = app || {};
 
 app.Main = new Model({
   /**
+   * The various locations
+   * @type {Array}
+   */
+  locations: ['overview', 'wedding', 'party', 'morning', 'sleeping'],
+
+  /**
    * Initialize
    */
   init: function() {
+    var initPosition = window.scrollY;
+
     this.map = new app.Map();
     this.$navigation = $('.navigation');
 
@@ -15,6 +23,21 @@ app.Main = new Model({
     $('.menu-button').on('click', this.openMenu);
     $('.navigation__close').on('click', this.onMenuCloseClick);
     $('.navigation__link').on('click', this.closeMenu);
+
+    setTimeout(function() {
+      $.each(this.locations, $.proxy(function(index, name) {
+        var $location = $('.location--' + name),
+          top = $location.offset().top,
+          bottom = top + $location.height();
+
+        if (
+          initPosition >= top &&
+          initPosition <= bottom
+        ) {
+          this.map.goToMarker(name);
+        }
+      }, this));
+    }.bind(this), 500);
   },
 
   /**
@@ -48,9 +71,7 @@ app.Main = new Model({
    * Initialize the waypoints
    */
   initWaypoints: function() {
-    var locations = ['overview', 'wedding', 'party', 'morning', 'sleeping'];
-
-    $.each(locations, $.proxy(function(index, name) {
+    $.each(this.locations, $.proxy(function(index, name) {
       $('.location--' + name).waypoint({
         handler: function(direction) {
           if (direction !== 'down') {
