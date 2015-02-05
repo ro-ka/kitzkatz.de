@@ -27,7 +27,7 @@ app.Map = new Model({
       weddingDummys = [[53.589882, 9.999], [53.589882, 9.984]],
       partyDummys = [[53.576456438929, 9.82], [53.576456438929, 9.83]],
       morningDummys = [[53.560874, 10.045], [53.560874, 10.027]],
-      sleepingDummys = [[53.560498, 9.93], [53.560498, 9.97]],
+      sleepingDummys = [[53.560498, 9.85], [53.560498, 9.97]],
       markers = [
         {
           name: 'wedding',
@@ -49,9 +49,15 @@ app.Map = new Model({
         },
         {
           name: 'sleeping',
+          title: 'Nachtlager: Hotel Hamburg Altona',
+          symbol: 'lodging',
+          location: [53.5537802621917, 9.93338406085968]
+        },
+        {
+          name: 'sleeping',
           title: 'Nachtlager: Superbude',
           symbol: 'lodging',
-          location: [53.560498, 9.96019]
+          location: [53.5606775914178, 9.96014177799225]
         },
       ];
 
