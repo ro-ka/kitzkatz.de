@@ -37,7 +37,7 @@ app.Map = new Model({
         },
         {
           name: 'party',
-          title: 'Trauung &amp; Feier',
+          title: 'Trauung & Feier',
           symbol: 'circle-stroked',
           location: [53.5765981765732, 9.82722222805023]
         },
