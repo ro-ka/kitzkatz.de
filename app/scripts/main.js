@@ -37,7 +37,7 @@ app.Main = new Model({
           this.map.goToMarker(name);
         }
       }, this));
-    }.bind(this), 500);
+    }.bind(this), 1000);
   },
 
   /**
