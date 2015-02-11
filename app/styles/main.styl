@@ -81,7 +81,7 @@ h2
   max-width: 30em
   z-index: 5
   background: #373B44
-  border-right: 5em solid #373B44
+  border-right: 2em solid #373B44
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7)
   padding: 2em .5em 2em 4em
   text-align: right
@@ -89,7 +89,7 @@ h2
   animation-fill-mode: both
   &--visible
     animation: .75s ease bounce-from-right
-    transform: translateX(5em)
+    transform: translateX(2em)
   &--hidden
     animation: .75s ease bounce-to-right
     transform: translateX(120%)
@@ -209,13 +209,14 @@ h2
   &__content
     position: absolute
     pointer-events: auto
-    bottom: 3em
-    right: 5%
-    max-width: 90%
+    bottom: 2em
+    right: 2.5%
+    max-width: 95%
     padding: 1em 1.5em
     background: #fff
     box-shadow: 0 0 2px rgba(0, 0, 0,0.4)
     @media (min-width: 600px)
+      right: 5%
       max-width: 50%
     @media (min-width: 1400px)
       max-width: 50em
@@ -229,17 +230,23 @@ h2
       &--3
         font-size: 4em
         bottom: .25em
-        right: 1.7em
+        right: .6em
         transform: rotate(5deg)
         color: #54b7a6
+        @media (min-width: 600px)
+          right: 1.7em
       &--4
         bottom: .25em
-        right: 1em
+        right: .1em
         transform: rotate(50deg)
+        @media (min-width: 600px)
+          right: 1em
       &--5
         bottom: .5em
-        right: .75em
+        right: .25em
         transform: rotate(150deg)
+        @media (min-width: 600px)
+          right: .75em
       &--heart
         font-size: 3em
         top: .05em
@@ -266,8 +273,10 @@ h2
         -moz-osx-font-smoothing: grayscale
 
   &--party__content, &--sleeping__content
-    left: 5%
+    left: 2.5%
     right: auto
+    @media (min-width: 600px)
+      left: 5%
 
 .kitzkatz
   font-size: 1rem
@@ -293,17 +302,17 @@ h2
   0%
     transform: translateX(120%)
   60%
-    transform: translateX(3em)
+    transform: translateX(1em)
   80%
-    transform: translateX(5.75em)
+    transform: translateX(2.75em)
   100%
-    transform: translateX(5em)
+    transform: translateX(2em)
 
 @keyframes bounce-to-right
   0%
-    transform: translateX(5em)
+    transform: translateX(2em)
   20%
-    transform: translateX(3.5em)
+    transform: translateX(1.5em)
   100%
     transform: translateX(120%)
 
