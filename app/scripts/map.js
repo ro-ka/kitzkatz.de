@@ -27,7 +27,7 @@ app.Map = new Model({
       weddingDummys = [[53.589882, 9.999], [53.589882, 9.984]],
       partyDummys = [[53.576456438929, 9.82], [53.576456438929, 9.83]],
       morningDummys = [[53.560874, 10.045], [53.560874, 10.027]],
-      sleepingDummys = [[53.560498, 9.85], [53.560498, 9.97]],
+      sleepingDummys = [[53.560498, 9.68], [53.560498, 9.961]],
       markers = [
         {
           name: 'wedding',
@@ -39,7 +39,8 @@ app.Map = new Model({
           name: 'party',
           title: 'Trauung & Feier',
           symbol: 'circle-stroked',
-          location: [53.5765981765732, 9.82722222805023]
+          location: [53.5765981765732, 9.82722222805023],
+          zIndexOffset: 100
         },
         {
           name: 'morning',
@@ -59,12 +60,20 @@ app.Map = new Model({
           symbol: 'lodging',
           location: [53.5606775914178, 9.96014177799225]
         },
+        {
+          name: 'sleeping',
+          title: 'Nachtlager: Hotel Blankenese',
+          symbol: 'lodging',
+          location: [53.5746329178676, 9.82420742511749]
+        },
       ];
 
     $.each(markers, $.proxy(function(index, marker) {
       L.marker(marker.location, {
           alt: marker.name,
           title: marker.title,
+          riseOnHover: true,
+          zIndexOffset: marker.zIndexOffset || 0,
           icon: L.mapbox.marker.icon({
           'marker-size': 'large',
           'marker-symbol': marker.symbol,
