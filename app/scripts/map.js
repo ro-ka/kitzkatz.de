@@ -23,11 +23,11 @@ app.Map = new Model({
    * Initialize the marker
    */
   initMarkers: function() {
-    var overviewDummys = [[53.560874, 10.04], [53.576456438929, 9.821]],
-      weddingDummys = [[53.589882, 9.999], [53.589882, 9.984]],
-      partyDummys = [[53.576456438929, 9.82], [53.576456438929, 9.83]],
+    var overviewDummys = [[53.560874, 10.04], [53.560874, 9.821]],
+      weddingDummys = [[53.589882, 9.999], [53.589882, 9.98]],
+      partyDummys = [[53.576456438929, 9.81], [53.576456438929, 9.83]],
       morningDummys = [[53.560874, 10.045], [53.560874, 10.027]],
-      sleepingDummys = [[53.560498, 9.68], [53.560498, 9.961]],
+      sleepingDummys = [[53.560498, 9.68], [53.560498, 9.999]],
       markers = [
         {
           name: 'wedding',
