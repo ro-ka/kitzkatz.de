@@ -44,5 +44,5 @@ To deploy the application, run the following commands:
 For example:
 ```sh
 grunt release:patch|minor|major
-grunt build
+sh deploy.sh
 ```
