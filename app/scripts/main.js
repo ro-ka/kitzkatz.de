@@ -11,8 +11,6 @@ app.Main = new Model({
    * Initialize
    */
   init: function() {
-    var initPosition = window.scrollY;
-
     this.map = new app.Map();
     this.$navigation = $('.navigation');
 
@@ -24,20 +22,27 @@ app.Main = new Model({
     $('.navigation__close').on('click', this.onMenuCloseClick);
     $('.navigation__link').on('click', this.closeMenu);
 
-    setTimeout(function() {
-      $.each(this.locations, $.proxy(function(index, name) {
-        var $location = $('.location--' + name),
-          top = $location.offset().top,
-          bottom = top + $location.height();
+    setTimeout(this.checkWaypoints.bind(this), 1000);
+  },
 
-        if (
-          initPosition >= top &&
-          initPosition <= bottom
-        ) {
-          this.map.goToMarker(name);
-        }
-      }, this));
-    }.bind(this), 1000);
+  /**
+   * Check which waypoint should be shown
+   */
+  checkWaypoints: function() {
+    var initPosition = window.scrollY;
+
+    $.each(this.locations, $.proxy(function(index, name) {
+      var $location = $('.location--' + name),
+        top = $location.offset().top,
+        bottom = top + $location.height();
+
+      if (
+        initPosition >= top &&
+        initPosition <= bottom
+      ) {
+        this.map.goToMarker(name);
+      }
+    }, this));
   },
 
   /**
@@ -103,7 +108,9 @@ app.Main = new Model({
   scrollToLocation: function(name) {
     $('html, body').animate({
       scrollTop: $('.location--' + name).offset().top
-    }, 400);
+    }, 400, function() {
+      setTimeout(this.checkWaypoints.bind(this), 500);
+    }.bind(this));
   }
 });
 

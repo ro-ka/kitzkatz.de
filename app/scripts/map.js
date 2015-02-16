@@ -17,6 +17,7 @@ app.Map = new Model({
     });
 
     this.initMarkers();
+    this.initFitBounds();
   },
 
   /**
@@ -131,10 +132,33 @@ app.Map = new Model({
   },
 
   /**
+   * Create a stack for the fitBounds calls
+   * and create a runloop when to set them
+   */
+  initFitBounds: function() {
+    this.fitBounds = '';
+    this.goToFitBounds();
+  },
+
+  /**
+   * Go to the newest name
+   */
+  goToFitBounds: function() {
+    setTimeout(this.goToFitBounds, 250);
+
+    if (this.fitBounds === '') {
+      return;
+    }
+
+    this.mapCanvas.fitBounds(this.markerBounds[this.fitBounds]);
+    this.fitBounds = '';
+  },
+
+  /**
    * Go to the passed in marker
    * @param  {String} name The marker name
    */
   goToMarker: function(name) {
-    this.mapCanvas.fitBounds(this.markerBounds[name]);
+    this.fitBounds = name;
   }
 });
