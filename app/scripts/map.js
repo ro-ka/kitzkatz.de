@@ -24,6 +24,7 @@ app.Map = new Model({
    */
   initMarkers: function() {
     var overviewDummys = [[53.560874, 10.04], [53.560874, 9.821]],
+      warmupDummys = [[53.5444912295412, 9.90], [53.5444912295412, 9.98]],
       weddingDummys = [[53.589882, 9.999], [53.589882, 9.98]],
       partyDummys = [[53.576456438929, 9.81], [53.576456438929, 9.83]],
       morningDummys = [[53.560874, 10.045], [53.560874, 10.027]],
@@ -41,6 +42,12 @@ app.Map = new Model({
           symbol: 'circle-stroked',
           location: [53.5765981765732, 9.82722222805023],
           zIndexOffset: 100
+        },
+        {
+          name: 'warmup',
+          title: 'Freitag Abend',
+          symbol: 'alcohol-shop',
+          location: [53.5444912295412, 9.90549445152283]
         },
         {
           name: 'morning',
@@ -88,6 +95,7 @@ app.Map = new Model({
 
     this.markerBounds = {
       overview: L.latLngBounds(overviewDummys),
+      warmup: L.latLngBounds(warmupDummys),
       wedding: L.latLngBounds(weddingDummys),
       party: L.latLngBounds(partyDummys),
       morning: L.latLngBounds(morningDummys),

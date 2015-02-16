@@ -5,7 +5,7 @@ app.Main = new Model({
    * The various locations
    * @type {Array}
    */
-  locations: ['overview', 'wedding', 'party', 'morning', 'sleeping'],
+  locations: ['overview', 'warmup', 'wedding', 'party', 'morning', 'sleeping'],
 
   /**
    * Initialize
