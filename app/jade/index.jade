@@ -1,0 +1,141 @@
+extends /layouts/_default
+
+block content
+  button.menu-button Menü
+
+  nav.navigation
+    button.navigation__close
+    i.icon-flower.navigation__flower
+    a.navigation__link(href='#standesamt', title="Standesamt") Standesamt
+    a.navigation__link(href='#freitag-abend', title="Warmup") Freitag Abend
+    a.navigation__link(href='#feier', title="Trauung & Feier") Trauung &amp; Feier
+    a.navigation__link(href='#morgen', title="Der Morgen danach…") Der Morgen danach…
+    a.navigation__link(href='#uebernachtung', title="Nachtlager") Nachtlager
+
+  .map
+
+  .slide.intro
+    h1.intro__title
+      span.intro__title__name.intro__title__name--1 Ulrike
+      span.intro__title__and &amp;
+      span.intro__title__name.intro__title__name--2 Robert
+    .intro__action &#8675;&nbsp;&nbsp;Einfach&nbsp;scrollen&nbsp;&nbsp;&#8675;
+
+  .slide.location.location--overview
+
+  #standesamt.slide.location.location--wedding
+    .location__content.location--wedding__content
+      i.icon-flower.location__content__icon.location__content__icon--1
+      h2.location__content__title Standesamt
+      p
+        | Wir trauen uns! Die standesamtliche Trauung findet am&nbsp;
+        i.icon-watch
+        | &nbsp;24.7. um 13h im Standesamt Hamburg-Nord statt. Wenn Ihr Zeit und Lust habt, auch an dem Tag mit uns anzustoßen, kommt vorbei!
+      p.location__content__address
+        strong Standesamt Hamburg-Nord
+        br
+        | Robert-Koch-Straße 17, 20249 Hamburg
+        br
+        a.location__content__address__navigation(title='Standesamt Hamburg-Nord', href='https://www.google.de/maps/dir//Fachamt+Personenstandswesen+%2F+Standesamt+Hamburg-Nord,+Robert-Koch-Straße+17,+20249+Hamburg/@53.58959,9.985183,17z/', target='_blank')
+          | Route planen
+
+  #freitag-abend.slide.location.location--warmup
+    .location__content.location--warmup__content
+      i.icon-flower.location__content__icon.location__content__icon--5
+      h2.location__content__title Freitag Abend
+      p
+        | Wenn Ihr Freitag schon den Hamburger Hafen erreicht, dann können wir schon gemütlich am Elbstrand in der Strandperle anstoßen.
+      p.location__content__address
+        strong Strandperle
+        br
+        | Övelgönne 60, 22605 Hamburg
+        br
+        a.location__content__address__navigation(title='Strandperle', href='https://www.google.de/maps/dir//Strandperle,+Övelgönne+60,+22605+Hamburg/@53.544423,9.905456,16z/', target='_blank')
+          | Route planen
+
+  #feier.slide.location.location--party
+    .location__content.location--party__content
+      i.icon-heart.location__content__icon.location__content__icon--heart
+      h2.location__content__title Trauung &amp; Feier
+      p Aus Kitz und Katz wird KitzKatz! Und das wollen wir mit euch feiern!
+      p
+        | Los geht es um&nbsp;
+        i.icon-watch
+        | &nbsp;16:15h am 25.7. mit der freien Trauung in festlicher Kleidung. Anschließend wird nach Speis und Trank das Tanzbein geschwungen!
+      p Ihr habt eine Idee für ein Spiel oder eine Rede? Dann setzt euch bitte mit uns oder den TrauzeugInnen in Verbindung, damit wir das zeitlich mit einplanen können.
+      p Wenn ihr nach einem Geschenk sucht: Über eine Finanzspritze für die anschließenden Flitterwochen freuen wir uns sehr.
+      p.location__content__address
+        strong Villa Mignon
+        br
+        | Osdorfer Landstraße 380, 22589 Hamburg
+        br
+        a.location__content__address__navigation(title='Villa Mignon', href='https://www.google.de/maps/dir//Villa+Mignon,+Osdorfer+Landstra%C3%9Fe+380,+22589+Hamburg/@53.576147,9.82766,17z/', target='_blank')
+          | Route planen
+
+
+  .slide.kitzkatz
+
+  #morgen.slide.location.location--morning
+    .location__content.location--morning__content
+      i.icon-flower.location__content__icon.location__content__icon--3
+      i.icon-flower.location__content__icon.location__content__icon--4
+      h2.location__content__title Der Morgen danach…
+      p Ein ordentliches Katerfrühstück, im Lieblingscafé an der Ecke. Wir freuen uns, wenn wir gemeinsam den vergangenen Abend bei hausgemachten Brötchen und Kuchen auswerten können!
+      p.location__content__address
+        strong The Village Den
+        br
+        | Lübecker Straße 29, 22087 Hamburg
+        br
+        a.location__content__address__navigation(title='The Village Den', href='https://www.google.de/maps/dir//The+Village+Den,+Lübecker+Straße+29,+22087+Hamburg/@53.560874,10.03004,17z/', target='_blank')
+          | Route planen
+
+  #uebernachtung.slide.location.location--sleeping
+    .location__content.location--sleeping__content
+      i.icon-flower.location__content__icon.location__content__icon--5
+      h2.location__content__title Nachtlager
+      p Noch kein Bett in Hamburg? Keine Sorge, hier findet ihr was!
+      p.location__content__address
+        a(href='http://www.superbude.de/hostel-hamburg-st-pauli/', title='Superbude St. Pauli', target='_blank')
+          strong Superbude St. Pauli
+        br
+        | Doppelzimmer für ~75€
+        br
+        | Juliusstraße 1-7, 22769 Hamburg
+        br
+        a.location__content__address__navigation(title='Superbude St. Pauli', href='https://www.google.de/maps/dir//Hostel+Superbude+St.+Pauli,+Juliusstraße+1-7,+22769+Hamburg/@53.560498,9.96019,17z/', target='_blank')
+          | Route planen
+      p.location__content__address
+        a(href='http://www.hotel-hamburg-altona.de/', title='Hotel Hamburg Altona', target='_blank')
+          strong Hotel Hamburg Altona
+        br
+        | Doppelzimmer für ~80€
+        br
+        | Hahnenkamp 8, 22765 Hamburg
+        br
+        a.location__content__address__navigation(title='Hotel Hamburg Altona', href='https://www.google.de/maps/dir//Hotel+Hamburg+Altona,+Hahnenkamp+8,+22765+Hamburg/@53.5540113,9.9323382,16z/', target='_blank')
+          | Route planen
+      p.location__content__address
+        a(href='http://www.hotel-blankenese.de/', title='Hotel Blankenese', target='_blank')
+          strong Hotel Blankenese
+        br
+        | Doppelzimmer für ~100€
+        br
+        | Schenefelder Landstr. 164, 22589 Hamburg
+        br
+        a.location__content__address__navigation(title='Hotel Blankenese', href='https://www.google.de/maps/dir//Hotel+Blankenese,+Schenefelder+Landstraße+162,+22589+Hamburg/@53.5749045,9.8261299,16z/', target='_blank')
+          | Route planen
+
+  .imprint
+    .imprint__content
+      h2 Impressum
+      p
+        strong Inhaltlich Verantwortlicher:
+        br
+        a(href='http://robert.katzki.de', title='Robert Katzki') Robert Katzki
+        br
+        | Hamburg
+        br
+        | robert@katzki.de
+      p
+        strong Haftungshinweis:
+        |  Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
